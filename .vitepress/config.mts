@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import diagrams from './diagram-manifest.json'
 import { fileURLToPath } from 'node:url'
 import manifest from '../content-manifest.json'
+import { base } from '../site-paths.json'
 
 const groups = [
   { text: 'Start here', items: [
@@ -28,11 +29,13 @@ const groups = [
 ]
 export default defineConfig({
   title: 'Polariton',
+  base,
   description: 'Persistent research workspaces for humans and AI agents. Learn about research graphs, workers, capabilities, checkpoints, and provenance.',
   srcDir: 'polariton_documentation_website',
   srcExclude: ['README.md'],
   cleanUrls: true,
   vite: {
+    server: { port: 5173, strictPort: true },
     publicDir: fileURLToPath(new URL('../public', import.meta.url)),
     plugins: [{
       name: 'polariton:resolve-search-hmr',
@@ -45,7 +48,7 @@ export default defineConfig({
       },
     }],
   },
-  head: [['link', { rel: 'icon', href: '/polariton-logo.png', type: 'image/png' }]],
+  head: [['link', { rel: 'icon', href: `${base}polariton-logo.png`, type: 'image/png' }]],
   themeConfig: {
     siteTitle: 'Polariton',
     logo: { src: '/polariton-logo.png', alt: '' },

@@ -63,7 +63,7 @@ source qualification. External link availability is not checked by the local bui
   themes, and mobile code/table overflow.
 - Set canonical URLs and sitemap for the confirmed production hostname.
 - Create a separate Vercel project using `npm run build` and `.vitepress/dist`.
-  Configure its subdomain and Cloudflare DNS only when publication is authorized.
+  Configure the personal website’s `/polariton/*` proxy only when publication is authorized; no subdomain or DNS change is needed.
 
 The website has its own lockfile and no dependencies on the personal website.
 
@@ -91,3 +91,23 @@ and directed-edge counts. Review actual endpoints and grouping visually when
 updating a drawing; the automated count check does not prove graph equivalence.
 Illustrations use CSS theme colors and server-rendered SVG. Mobile readers can
 scroll each diagram horizontally without overflowing the page.
+
+## Mounting under /polariton/
+
+`site-paths.json` defines the shared VitePress base and build-check prefix.
+`npm run dev` serves `http://127.0.0.1:5173/polariton/` on a fixed port;
+`npm run preview` serves the built site at `http://localhost:4173/polariton/`.
+
+For integrated local use, run `npm run build` and `npm run preview` here, then
+`npm run dev` in the personal website repo. Its `/polariton/*` rewrite forwards
+to this static preview on port 4173 while preserving the path. Rebuild after
+documentation edits. The header link opens the docs in a new tab under the
+personal website’s origin. Live Vite development remains available directly on
+port 5173; Next.js rewrites normalize Vite development-module query strings,
+so integrated preview uses the production output instead.
+
+`vercel.json` contains future origin-side path rewrites because VitePress’s
+output files live at the build root even when their public URLs use a base path.
+A future personal-site deployment must point `POLARITON_DOCS_ORIGIN` at that
+independent docs origin. This configuration has not been deployed. Repositories,
+lockfiles, and build commands remain independent.
