@@ -55,8 +55,6 @@ body { -webkit-font-smoothing: antialiased; }
 .VPSidebarItem .text { line-height: 1.45; }
 .release-note { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--vp-c-text-2); margin-bottom: 16px; }
 .release-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--vp-c-brand-2); }
-.source-note { border-top: 1px solid var(--vp-c-divider); margin-top: 32px; padding-top: 16px; font-size: 12px; line-height: 1.6; color: var(--vp-c-text-3); }
-.source-note a { color: var(--vp-c-brand-1); }
 .verification-note { font-size: 14px; line-height: 1.6; border-left: 2px solid var(--vp-c-brand-2); padding: 12px 16px; background: var(--vp-c-bg-soft); margin: 0 0 24px; }
 .verification-note strong { display: block; font-weight: 600; margin-bottom: 4px; }
 .research-diagram { margin: 24px 0; padding: 16px; border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg); }

@@ -17,14 +17,16 @@ const { Layout } = DefaultTheme
         <strong>Walkthrough verification pending</strong>
         The arithmetic has been checked; this tutorial has not yet been verified live in Polariton.
       </aside>
-    </template>
-    <template #doc-after>
-      <div class="source-note">
+      <aside v-if="page.relativePath === 'reference/compatibility.md'" class="verification-note" aria-label="Documentation source verification">
         <template v-if="manifest.commit">
-          Documentation source: <a :href="`${manifest.repository}/tree/${manifest.commit}`">{{ manifest.commit.slice(0, 12) }}</a>
+          <strong>Documentation source</strong>
+          This documentation describes <a :href="`${manifest.repository}/tree/${manifest.commit}`">Polariton commit {{ manifest.commit.slice(0, 12) }}</a>.
         </template>
-        <template v-else>Local documentation snapshot · upstream source commit not yet verified.</template>
-      </div>
+        <template v-else>
+          <strong>Documentation source verification pending</strong>
+          The release label comes from the supplied documentation. The exact Polariton source commit and corresponding upstream files have not yet been verified for this documentation snapshot.
+        </template>
+      </aside>
     </template>
   </Layout>
 </template>

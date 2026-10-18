@@ -30,7 +30,10 @@ by the theme; original diagram source remains available in a disclosure.
 The source manifest records byte hashes for all supplied files. These protect
 against accidental edits; they do not prove correspondence to the public source.
 The recorded release label comes from the installation page. The upstream commit
-and file mappings are intentionally unset until verified.
+and file mappings are intentionally unset until verified. The theme shows this
+source-verification status only on the Compatibility and verification scope page.
+The preview label remains on every page, and the live-verification notice remains
+on the research tutorial. These notices do not alter the supplied Markdown.
 
 The Polariton source repository owns the 12 reused pages. This site owns the
 Introduction and research tutorial, plus its theme, navigation, and metadata.
