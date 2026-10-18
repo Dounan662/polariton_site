@@ -31,7 +31,11 @@
   "rewrites": [
     {
       "source": "/polariton",
-      "destination": "/index.html"
+      "destination": "/"
+    },
+    {
+      "source": "/polariton/",
+      "destination": "/"
     },
     {
       "source": "/polariton/:path*",
