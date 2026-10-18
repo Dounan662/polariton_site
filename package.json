@@ -1,0 +1,23 @@
+{
+  "name": "polariton-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "npm run check:content && npm run check:diagrams && vitepress build && node scripts/check-links.mjs",
+    "preview": "vitepress preview",
+    "check:content": "node scripts/check-content.mjs",
+    "check:diagrams": "node scripts/check-diagrams.mjs"
+  },
+  "devDependencies": {
+    "mermaid": "12.2.0",
+    "vitepress": "1.6.4"
+  },
+  "overrides": {
+    "vite": "6.4.4"
+  }
+}

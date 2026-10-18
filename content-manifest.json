@@ -1,0 +1,84 @@
+{
+  "repository": "https://github.com/Dounan662/polariton-agent-space",
+  "release": "5.0.0-preview.1",
+  "commit": null,
+  "status": "Unverified local handoff; release label comes from supplied installation page.",
+  "tutorialLiveVerified": false,
+  "files": {
+    "README.md": {
+      "sha256": "4bb1aa7a8633434a7c3edde7daee3a693631a207be97942b401abc6ee91d551e",
+      "owner": "site",
+      "upstreamPath": null
+    },
+    "guides/checkpoints.md": {
+      "sha256": "f9f6c65b46c37a4ddbfdfc1bc3b737c659ff38b93326dc4e7cec27efce83ca6a",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "guides/provenance.md": {
+      "sha256": "5647d24f7a8938a78f8a72bda9c7177d62db4195553db0e1be4e0c361af7c9bd",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "guides/research-example.md": {
+      "sha256": "c3b56df55928240df0d3d53eb9260abafd4aa8a5e5400b198f3f401fdbfd3ff3",
+      "owner": "site",
+      "upstreamPath": null
+    },
+    "guides/research-projects.md": {
+      "sha256": "e96dc398617830af7c65a7f1fa50a64edeff79b509dd4dbc712e4024d0c1d5a6",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "guides/storage.md": {
+      "sha256": "d3268ff0b5536c6ea9afc8d1f4e6995058c6b9bb40d7b467357e5d2b1dea8f9d",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "guides/tools.md": {
+      "sha256": "7a86150e0f5c1859766fa9d5fe4cdd1bd2d12b3618df7af0cdaaf8f7fa0fdbb8",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "index.md": {
+      "sha256": "07bdb9f0ffbe2f127b378f017b12649fe3cb148274148d1a16f2d4fd3761ed95",
+      "owner": "site",
+      "upstreamPath": null
+    },
+    "reference/architecture.md": {
+      "sha256": "e117c8560b6bedf667bce45e68040b0e6f6040398ca1741173d41b3b21dd3d8c",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "reference/cli.md": {
+      "sha256": "075bcd8401eecdb19d3a8786374f0f0f8e1c412a07252b39382d3ccc690ea022",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "reference/compatibility.md": {
+      "sha256": "907debebd4f9d749e987e90d632250a27048c52b2a25c91ab078cd7871868043",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "reference/environments.md": {
+      "sha256": "60aab1085be758b0aeb44026413b304c8d83fdc89c44edf460ca379fc76fed99",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "reference/limitations.md": {
+      "sha256": "7df6374286cfb302c85e516f618e36b7ba6075de589ed2f0dafac011e1896223",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "start/getting-started.md": {
+      "sha256": "8685e697e841f35e993e1d35217711bc79b8dbe67dde905538a387cdc5354ea5",
+      "owner": "upstream",
+      "upstreamPath": null
+    },
+    "start/installation.md": {
+      "sha256": "f1fa03a2ae51e0284922fb7685bd37e47df271b78e47099f84fb3451e0576f9e",
+      "owner": "upstream",
+      "upstreamPath": null
+    }
+  }
+}

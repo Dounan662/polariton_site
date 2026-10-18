@@ -1,0 +1,22 @@
+{
+  "d2ac10ca4ad66c6014e8acfb1d956642a50c4529a32a2c35dc21f32cc2ba2e15": {
+    "kind": "project",
+    "source": "guides/research-projects.md"
+  },
+  "42570e20c832dd917ea3de05fb5e25202429e02e53c48fdaa8c7feb52186ee43": {
+    "kind": "provenance",
+    "source": "guides/provenance.md"
+  },
+  "9a3c6789407b5ca4e8af1ca6b1ec0c68e47061b2a7f67781d86f9a4bd8b396b1": {
+    "kind": "capabilities",
+    "source": "guides/tools.md"
+  },
+  "30d71fb261521e9849910638624a423aeb10c7126588c564ae606f23019484a2": {
+    "kind": "architecture",
+    "source": "reference/architecture.md"
+  },
+  "9ad8d82dac88365836f2288bd75a218d15882fadf03a79ccc500be47b0079b8d": {
+    "kind": "runtimes",
+    "source": "reference/architecture.md"
+  }
+}

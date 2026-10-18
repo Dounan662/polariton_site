@@ -1,0 +1,109 @@
+:root {
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, Helvetica, sans-serif;
+  --vp-font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --polariton-serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --vp-c-bg: #fcfcfd;
+  --vp-c-bg-alt: #f2f5f8;
+  --vp-c-bg-soft: #f2f5f8;
+  --vp-c-bg-elv: #fcfcfd;
+  --vp-c-text-1: #171e27;
+  --vp-c-text-2: #414c59;
+  --vp-c-text-3: #596879;
+  --vp-c-brand-1: #46698d;
+  --vp-c-brand-2: #547698;
+  --vp-c-brand-3: #6889aa;
+  --vp-c-brand-soft: #54769814;
+  --vp-c-divider: #dfe4e9;
+  --vp-c-border: #c8d1db;
+  --vp-sidebar-width: 264px;
+  --vp-nav-height: 64px;
+  --vp-code-font-size: 13px;
+  --vp-code-line-height: 1.7;
+}
+.dark {
+  --vp-c-bg: #14191f;
+  --vp-c-bg-alt: #19212a;
+  --vp-c-bg-soft: #1c2630;
+  --vp-c-bg-elv: #1c2630;
+  --vp-c-text-1: #e3e8ef;
+  --vp-c-text-2: #b0bac6;
+  --vp-c-text-3: #96a5b7;
+  --vp-c-brand-1: #a0b9d2;
+  --vp-c-brand-2: #b6cce0;
+  --vp-c-brand-3: #91afcc;
+  --vp-c-brand-soft: #a0b9d21a;
+  --vp-c-divider: #303b48;
+  --vp-c-border: #455568;
+}
+html { scrollbar-gutter: stable; }
+body { -webkit-font-smoothing: antialiased; }
+.VPNavBarTitle .title { font-family: var(--polariton-serif); font-size: 24px; font-weight: 400; letter-spacing: -.025em; }
+.vp-doc h1, .vp-doc h2, .vp-doc h3 { font-family: var(--polariton-serif); font-weight: 400; letter-spacing: -.025em; }
+.vp-doc h1 { font-size: clamp(30px, 3vw, 40px); line-height: 1.15; margin-bottom: 24px; }
+.vp-doc h2 { font-size: 27px; line-height: 1.25; margin: 32px 0 12px; padding-top: 24px; }
+.vp-doc h3 { font-size: 22px; line-height: 1.3; margin-top: 24px; }
+.vp-doc p, .vp-doc li { font-size: 16px; line-height: 1.65; }
+.vp-doc p { margin: 12px 0; }
+.vp-doc a { text-underline-offset: 3px; }
+.vp-doc strong { font-weight: 600; }
+.vp-doc table { font-size: 14px; }
+.vp-doc th, .vp-doc td { padding: 10px 14px; line-height: 1.55; }
+.vp-doc div[class*='language-'] { border: 1px solid var(--vp-c-divider); border-radius: 6px; }
+.vp-doc blockquote { border-left-color: var(--vp-c-brand-2); color: var(--vp-c-text-2); }
+.VPDoc.has-aside .content-container { max-width: 720px !important; }
+.VPSidebarItem.level-0 { padding-bottom: 16px; }
+.VPSidebarItem .text { line-height: 1.45; }
+.release-note { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--vp-c-text-2); margin-bottom: 16px; }
+.release-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--vp-c-brand-2); }
+.source-note { border-top: 1px solid var(--vp-c-divider); margin-top: 32px; padding-top: 16px; font-size: 12px; line-height: 1.6; color: var(--vp-c-text-3); }
+.source-note a { color: var(--vp-c-brand-1); }
+.verification-note { font-size: 14px; line-height: 1.6; border-left: 2px solid var(--vp-c-brand-2); padding: 12px 16px; background: var(--vp-c-bg-soft); margin: 0 0 24px; }
+.verification-note strong { display: block; font-weight: 600; margin-bottom: 4px; }
+.research-diagram { margin: 24px 0; padding: 16px; border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg); }
+.diagram-scroll { overflow-x: auto; }
+.diagram-scroll svg { display: block; margin: auto; min-width: 600px; }
+.research-diagram details { margin-top: 12px; font-size: 12px; color: var(--vp-c-text-3); }
+.research-diagram summary { cursor: pointer; }
+.research-diagram pre { overflow: auto; font-size: 12px; line-height: 1.6; }
+.diagram-loading { color: var(--vp-c-text-3); font-size: 14px; }
+:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
+@media (min-width: 960px) { .VPDoc { padding-top: 40px !important; } }
+@media (max-width: 639px) {
+  .vp-doc h2 { font-size: 25px; margin-top: 28px; }
+  .research-diagram { padding: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+
+/* Preserve the supplied artwork; blend its white background into each theme. */
+.VPNavBarTitle .logo { width: 34px; height: 34px; object-fit: contain; mix-blend-mode: multiply; }
+.dark .VPNavBarTitle .logo { filter: invert(1); mix-blend-mode: screen; }
+.VPNavBarTitle .title { background: var(--vp-c-bg); }
+@media (min-width: 960px) {
+  .VPNavBarTitle.has-sidebar .title { background: var(--vp-c-bg-alt); }
+}
+
+/* Mermaid measures labels outside the article. Keep their typography identical
+   inside it, so prose margins cannot clip the foreignObject label boxes. */
+.vp-doc .research-diagram .nodeLabel p,
+.vp-doc .research-diagram .edgeLabel p { margin: 0; font-size: 14px; line-height: 1.5; }
+.vp-doc .research-diagram .nodeLabel,
+.vp-doc .research-diagram .edgeLabel { font-family: Arial, Helvetica, sans-serif; }
+.research-diagram .cluster-label { font-family: var(--polariton-serif); }
+
+.research-diagram { padding: 12px 0; border: 0; border-radius: 0; }
+.diagram-scroll .polariton-illustration { width: 100%; min-width: 660px; height: auto; }
+.polariton-illustration text { font-family: Arial, Helvetica, sans-serif; fill: var(--vp-c-text-1); font-size: 14px; }
+.polariton-illustration .figure-title { font-family: var(--polariton-serif); font-size: 21px; }
+.polariton-illustration .figure-label { font-weight: 600; font-size: 14px; }
+.polariton-illustration .figure-muted { fill: var(--vp-c-text-2); font-size: 13px; }
+.polariton-illustration .figure-note { font-size: 13px; fill: var(--vp-c-text-2); paint-order: stroke; stroke: var(--vp-c-bg); stroke-width: 8px; stroke-linejoin: round; }
+.polariton-illustration .figure-box { fill: var(--vp-c-bg); stroke: var(--vp-c-border); stroke-width: 1; }
+.polariton-illustration .figure-boundary { fill: var(--vp-c-bg-soft); stroke: var(--vp-c-border); stroke-width: 1; }
+.polariton-illustration .figure-worker { fill: color-mix(in srgb, var(--vp-c-brand-1) 9%, var(--vp-c-bg)); stroke: var(--vp-c-brand-2); stroke-width: 1; }
+.polariton-illustration .figure-edge { fill: none; stroke: var(--vp-c-brand-2); stroke-width: 1.2; stroke-linejoin: round; }
+.polariton-illustration .figure-arrow { fill: none; stroke: var(--vp-c-brand-2); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+
+.vp-doc .diagram-hint { display: none; font-size: 12px; color: var(--vp-c-text-3); margin: 8px 0 0; }
+@media (max-width: 767px) { .vp-doc .diagram-hint { display: block; } }
+
+.illustration-project .figure-note { stroke: var(--vp-c-bg-soft); }
