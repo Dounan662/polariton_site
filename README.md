@@ -1,8 +1,9 @@
 # Polariton documentation website
 
-Independent VitePress website for Polariton. Local implementation only; no remote,
-hosted deployment, or DNS changes have been made. `vercel.json` defines the future
-static build and response headers; it does not create a Vercel project.
+Independent VitePress website for Polariton, published at
+https://dounan-du.com/polariton/ through the personal website’s proxy.
+See [site architecture and deployment](docs/site-architecture.md) for repository
+ownership, production configuration, local preview, and deployment checks.
 
 ## Local use
 
@@ -54,7 +55,7 @@ compatibility documentation as the Polariton source commit. External links in th
 handoff currently target `main`; verify and pin version-specific references during
 source qualification. External link availability is not checked by the local build.
 
-## Before publication
+## Outstanding publication checks
 
 - Verify the documented Polariton commit and upstream mappings.
 - Verify the research tutorial in live Polariton; retain an accurate visible notice
@@ -62,8 +63,8 @@ source qualification. External link availability is not checked by the local bui
 - Check external links, Mermaid labels/relationships, keyboard use, search, both
   themes, and mobile code/table overflow.
 - Set canonical URLs and sitemap for the confirmed production hostname.
-- Create a separate Vercel project using `npm run build` and `.vitepress/dist`.
-  Configure the personal website’s `/polariton/*` proxy only when publication is authorized; no subdomain or DNS change is needed.
+Deployment is configured; see [the architecture guide](docs/site-architecture.md).
+The content qualification checks above remain outstanding despite the site being live.
 
 The website has its own lockfile and no dependencies on the personal website.
 
@@ -106,8 +107,6 @@ personal website’s origin. Live Vite development remains available directly on
 port 5173; Next.js rewrites normalize Vite development-module query strings,
 so integrated preview uses the production output instead.
 
-`vercel.json` contains future origin-side path rewrites because VitePress’s
-output files live at the build root even when their public URLs use a base path.
-A future personal-site deployment must point `POLARITON_DOCS_ORIGIN` at that
-independent docs origin. This configuration has not been deployed. Repositories,
-lockfiles, and build commands remain independent.
+`vercel.json` maps the public prefix to static output at the build root.
+Production routing, the personal site's origin variable, and the clean-URL
+homepage fix are documented in [the architecture guide](docs/site-architecture.md).

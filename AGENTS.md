@@ -16,3 +16,10 @@ code overflow, visible focus, and reduced-motion support usable.
 Read README.md and content-manifest.json before content maintenance. Do not claim
 an upstream commit or tutorial qualification without evidence. Run npm run build
 and relevant browser checks before shipping. Do not deploy or push unless requested.
+
+## Site integration context
+
+Read `docs/site-architecture.md` before changing navigation, documentation routing,
+builds, deployment, or cross-repository structure. Keep this guide current when
+those decisions change. The personal website and Polariton docs have separate
+repositories and Vercel builds; do not duplicate the documentation content.
